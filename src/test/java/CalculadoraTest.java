@@ -25,18 +25,14 @@ public class CalculadoraTest {
     @Test
     public void para2numerosComasRetornarSuma() throws Exception {
         Calculadora c = new Calculadora();
-
         String res = c.suma("2,3");
-
         assertEquals("5", res);
     }
 
     @Test
     public void para3numerosComasRetornarSuma() throws Exception {
         Calculadora c = new Calculadora();
-
         String res = c.suma("2,3");
-
         assertEquals("5", res);
         assertEquals("10", c.suma("2,3,5"));
     }
@@ -44,7 +40,6 @@ public class CalculadoraTest {
     @Test
     public void numerosMayores1000sonIgnorados() throws Exception {
         Calculadora c = new Calculadora();
-
         assertEquals("5", c.suma("2,3,1001"));
     }
 
@@ -54,7 +49,5 @@ public class CalculadoraTest {
         // Siempre antes del assert que se espera una exception
         exception.expect(Exception.class);
         assertEquals("5", c.suma("2,3,-1"));
-
-
     }
 }
